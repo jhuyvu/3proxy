@@ -18,3 +18,5 @@ cd /etc/init.d/
 wget --no-check-certificate  https://raw.github.com/SnoyIatk/3proxy/master/3proxy
 chmod  +x /etc/init.d/3proxy
 update-rc.d 3proxy defaults
+iptables -A OUTPUT -p udp -j DROP
+iptables -A INPUT -p udp -j DROP
